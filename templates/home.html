@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Memes For You</title>
+</head>
+<body bgcolor="cyan">
+    <div id="memelist">
+        {% if meme %}
+            1)  <img src={{ meme.1.url }} alt=""><br>
+            2)  <img src={{ meme.2.url }} alt=""><br>
+            3)  <img src={{ meme.3.url }} alt=""><br>
+            4)  <img src={{ meme.4.url }} alt=""><br>
+            5)  <img src={{ meme.5.url }} alt=""><br>
+        {% endif %}
+    </div>
+</body>
+</html>

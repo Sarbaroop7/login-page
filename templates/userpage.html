@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>MyPage</title>
+     <script>
+        function Fxclick()
+        {
+            document.getElementById("sorrymessage").style.visibility="visible";
+        }
+        function showdev()
+        {
+            document.getElementById("cookie").style.visibility="hidden";
+        }
+        setTimeout("showdev()",5000);
+     </script>
+</head>
+<body style="background-image: url('https://source.unsplash.com/1600x900/?login,login')">
+    <div style="height:280px;width:480px;text-align: center; background-color: cyan">
+        <h1>The page collects and accepts cookies</h1>
+        <br>
+        <form action="showmemes" method="get">
+            <button name="subject" type="submit" value="accept">Accept</button><br>
+            <br>
+        </form>
+        <form action="logout" method="get">
+            <button name="subject" type="submit" value="reject" onclick=Fxclick()>Reject</button><br>
+        </form>
+    </div>
+    <div id="sorrymessage" style="visibility:hidden;background-color: red">
+        <h2>Sorry</h2>
+    </div>
+    <div style="position: absolute;bottom:50px">
+        <div id="cookie" style="visibility:visible;position:absolute;bottom:5px;background-color: green">
+            Cookies : {{cookies}}
+        </div>
+    </div>
+</body>
+</html>

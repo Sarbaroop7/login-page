@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>LogIn</title>
+</head>
+<body bgcolor="cyan">
+    <form action="memepage" method="post" style="background-image: url('https://source.unsplash.com/800x600/?login,login');
+background-size: cover; height:480px; padding-top: 80px; text-align: center">
+        {% csrf_token %}
+        Username : <input type="text" name="username" placeholder="Enter Username" style="text-align:center;"><br>
+        <br>
+        Password : <input type="password" name="password" placeholder="Enter Password" style="text-align:center;"><br>
+        <br>
+        <input type="submit" style="text-align:center;">
+    </form>
+    <div>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+
